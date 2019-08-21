@@ -9,4 +9,8 @@ class CalculatorPresenter @Inject constructor() {
     fun onKeyboardButtonClick(input: String) {
 
     }
+
+    fun onEqualsClick() {
+
+    }
 }
