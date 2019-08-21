@@ -8,8 +8,7 @@ import com.ocado.feature.base.BaseFragment
 import kotlinx.android.synthetic.main.frament_calculator.*
 import javax.inject.Inject
 
-class CalculatorFragment : BaseFragment() {
-
+class CalculatorFragment : BaseFragment(), CalculatorView {
     @Inject
     lateinit var presenter: CalculatorPresenter
 
@@ -22,4 +21,6 @@ class CalculatorFragment : BaseFragment() {
         fragment_calculator_keyboard.onButtonClick = presenter::onKeyboardButtonClick
         fragment_calculator_keyboard.onEqualsClick = presenter::onEqualsClick
     }
+
+    override fun refreshResult(input: String) = fragment_calculator_result.refresh(input)
 }

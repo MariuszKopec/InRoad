@@ -15,7 +15,7 @@ import org.mockito.Mockito.verify
 import org.mockito.MockitoAnnotations
 
 @RunWith(AndroidJUnit4::class)
-class CalculatorFragmentKeyboardTest {
+class CalculatorFragmentKeyboardViewTest {
     @Mock
     lateinit var presenter: CalculatorPresenter
 
