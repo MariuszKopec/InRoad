@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.gridlayout.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:columnCount="3">
+
+    <TextView
+        android:id="@+id/view_keyboard_7"
+        style="@style/calendar_button_style"
+        android:text="7"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_8"
+        style="@style/calendar_button_style"
+        android:text="8"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_9"
+        style="@style/calendar_button_style"
+        android:text="9"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_4"
+        style="@style/calendar_button_style"
+        android:text="4"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_5"
+        style="@style/calendar_button_style"
+        android:text="5"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_6"
+        style="@style/calendar_button_style"
+        android:text="6"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_1"
+        style="@style/calendar_button_style"
+        android:text="1"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_2"
+        style="@style/calendar_button_style"
+        android:text="2"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_3"
+        style="@style/calendar_button_style"
+        android:text="3"
+        tools:ignore="HardcodedText" />
+</androidx.gridlayout.widget.GridLayout>
