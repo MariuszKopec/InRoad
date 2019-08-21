@@ -59,4 +59,22 @@
         style="@style/calendar_button_style"
         android:text="3"
         tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_0"
+        style="@style/calendar_button_style"
+        android:text="0"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_dot"
+        style="@style/calendar_button_style"
+        android:text="."
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_keyboard_equals"
+        style="@style/calendar_button_style"
+        android:text="="
+        tools:ignore="HardcodedText" />
 </androidx.gridlayout.widget.GridLayout>

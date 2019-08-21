@@ -10,6 +10,7 @@
         android:layout_height="wrap_content" />
 
     <com.ocado.feature.calculator.view.KeyboardView
+        android:id="@+id/fragment_calculator_keyboard"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
