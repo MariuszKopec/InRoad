@@ -5,6 +5,8 @@ buildscript {
     ext.appMinSdkVersion = 21
     ext.compileSdkVersion = 28
     ext.appTargetSdkVersion = 28
+    ext.daggerVersion = '2.18'
+    ext.javax_inject = '1'
 
     repositories {
         google()
