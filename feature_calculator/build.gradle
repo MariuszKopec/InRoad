@@ -1,20 +1,17 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
+
     defaultConfig {
-        vectorDrawables.useSupportLibrary = true
-        applicationId "com.inroad"
         if (gradle.startParameter.taskNames.contains(":app:assembleDebug")) {
             minSdkVersion rootProject.ext.debugSdkVersion
         } else {
             minSdkVersion rootProject.ext.appMinSdkVersion
         }
         targetSdkVersion rootProject.ext.appTargetSdkVersion
-        versionCode 1
-        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -27,13 +24,9 @@ android {
 }
 
 dependencies {
-    implementation project(':feature_calculator')
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
-    implementation 'androidx.core:core-ktx:1.0.2'
 
-    //TEST
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
