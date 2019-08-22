@@ -4,5 +4,5 @@
 [![codecov](https://codecov.io/gh/MariuszKopec/InRoad/branch/master/graph/badge.svg)](https://codecov.io/gh/MariuszKopec/InRoad)
 
 <p align="center">
-<img src="https://github.com/mariuszkopec/InRoad/screen.png" alt="Drawing" style="width: 10px;"/>
+<img src="https://github.com/MariuszKopec/InRoad/blob/master/screen.png" alt="Drawing" style="width: 10px;"/>
 </p>
