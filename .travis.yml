@@ -46,7 +46,7 @@ before_script:
 script:
   - ./gradlew build
   - ./gradlew build connectedAndroidTest --stacktrace
-  - ./gradlew build jacocoTestReport
+  - ./gradlew build jacocoFullReport
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
