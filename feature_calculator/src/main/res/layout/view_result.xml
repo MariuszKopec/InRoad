@@ -16,6 +16,6 @@
             android:gravity="center|end"
             android:maxLines="1"
             android:padding="@dimen/base_space"
-            android:textSize="@dimen/headline_5_text_size"
+            android:textSize="@dimen/headline_4_text_size"
             tools:text="123+332" />
 </LinearLayout>
