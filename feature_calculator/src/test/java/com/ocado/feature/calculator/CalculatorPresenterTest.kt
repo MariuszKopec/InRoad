@@ -1,6 +1,7 @@
 package com.ocado.feature.calculator
 
 import com.ocado.domain.CalculateInteractor
+import com.ocado.feature.base.Log
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -14,6 +15,8 @@ class CalculatorPresenterTest {
     @Mock
     lateinit var view: CalculatorView
     @Mock
+    lateinit var log: Log
+    @Mock
     lateinit var calculate: CalculateInteractor
     lateinit var presenter: CalculatorPresenter
 
@@ -21,7 +24,7 @@ class CalculatorPresenterTest {
     fun setup() {
         `when`(view.getResult()).thenReturn("")
         `when`(calculate(anyString())).thenReturn(0.0)
-        presenter = CalculatorPresenter(view, calculate)
+        presenter = CalculatorPresenter(view, calculate, log)
     }
 
     @Test
@@ -58,9 +61,30 @@ class CalculatorPresenterTest {
     }
 
     @Test
-    fun refreshCalculatorResult_onEqualsClick() {
+    fun refreshCalculatorResultWithoutDecimals_onEqualsClick() {
         `when`(calculate(anyString())).thenReturn(123.0)
         presenter.onEqualsClick()
         verify(view).refreshResult("123")
+    }
+
+    @Test
+    fun refreshCalculatorResultWithDecimals_onEqualsClick() {
+        `when`(calculate(anyString())).thenReturn(123.123)
+        presenter.onEqualsClick()
+        verify(view).refreshResult("123.123")
+    }
+
+    @Test
+    fun doNothingWhenCalculationError() {
+        `when`(calculate(anyString())).thenThrow(CalculateInteractor.WrongExpressionException::class.java)
+        presenter.onEqualsClick()
+        verify(view, never()).refreshResult(anyString())
+    }
+
+    @Test
+    fun logErrorWhenCalculateError() {
+        `when`(calculate(anyString())).thenThrow(CalculateInteractor.WrongExpressionException::class.java)
+        presenter.onEqualsClick()
+        verify(log).e(anyString(), anyString())
     }
 }
