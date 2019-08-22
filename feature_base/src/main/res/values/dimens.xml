@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="base_space">16dp</dimen>
+    <dimen name="headline_5_text_size">24sp</dimen>
+    <dimen name="headline_4_text_size">34sp</dimen>
 </resources>

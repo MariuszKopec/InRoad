@@ -4,6 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorBackground"
         app:columnCount="4">
 
     <TextView
@@ -26,7 +27,7 @@
 
     <ImageView
             android:id="@+id/view_keyboard_clear"
-            style="@style/calendar_button_style"
+            style="@style/calendar_button_operation_style"
             android:scaleType="center"
             android:src="@drawable/ic_backspace"
             tools:ignore="ContentDescription" />
@@ -51,7 +52,7 @@
 
     <TextView
             android:id="@+id/view_keyboard_minus"
-            style="@style/calendar_button_style"
+            style="@style/calendar_button_operation_style"
             android:text="-"
             tools:ignore="HardcodedText" />
 
@@ -75,9 +76,8 @@
 
     <TextView
             android:id="@+id/view_keyboard_plus"
-            style="@style/calendar_button_style"
+            style="@style/calendar_button_operation_style"
             android:text="+"
-            android:textColor="?colorAccent"
             tools:ignore="HardcodedText" />
 
     <Space style="@style/calendar_button_style" />
@@ -90,14 +90,13 @@
 
     <TextView
             android:id="@+id/view_keyboard_dot"
-            style="@style/calendar_button_style"
+            style="@style/calendar_button_operation_style"
             android:text="."
             tools:ignore="HardcodedText" />
 
     <TextView
             android:id="@+id/view_keyboard_equals"
-            style="@style/calendar_button_style"
+            style="@style/calendar_button_operation_style"
             android:text="="
-            android:textColor="?colorAccent"
             tools:ignore="HardcodedText" />
 </androidx.gridlayout.widget.GridLayout>
