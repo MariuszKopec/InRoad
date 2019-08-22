@@ -5,7 +5,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 class TestInjector(private val testApplicationModule: TestCalculatorFragmentModule) {
 
     fun inject() {
-        val app = InstrumentationRegistry.getInstrumentation().targetContext.applicationContext as TestApplication
+        val app = InstrumentationRegistry.getInstrumentation().targetContext.applicationContext as? TestApplication
         DaggerTestApplicationComponent
             .builder()
             .appModule(testApplicationModule)
