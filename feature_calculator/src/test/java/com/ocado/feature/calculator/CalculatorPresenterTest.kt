@@ -20,7 +20,7 @@ class CalculatorPresenterTest {
     @Before
     fun setup() {
         `when`(view.getResult()).thenReturn("")
-        `when`(calculate(anyString())).thenReturn("")
+        `when`(calculate(anyString())).thenReturn(0.0)
         presenter = CalculatorPresenter(view, calculate)
     }
 
@@ -59,7 +59,7 @@ class CalculatorPresenterTest {
 
     @Test
     fun refreshCalculatorResult_onEqualsClick() {
-        `when`(calculate(anyString())).thenReturn("123")
+        `when`(calculate(anyString())).thenReturn(123.0)
         presenter.onEqualsClick()
         verify(view).refreshResult("123")
     }

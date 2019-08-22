@@ -1,4 +1,4 @@
-package com.ocado.feature.calculator.view
+package com.ocado.feature.calculator.custom_view
 
 import android.content.Context
 import android.util.AttributeSet

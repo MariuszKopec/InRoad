@@ -5,12 +5,12 @@
         android:gravity="center"
         android:orientation="vertical">
 
-    <com.ocado.feature.calculator.view.ResultView
+    <com.ocado.feature.calculator.custom_view.ResultView
             android:id="@+id/fragment_calculator_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-    <com.ocado.feature.calculator.view.KeyboardView
+    <com.ocado.feature.calculator.custom_view.KeyboardView
             android:id="@+id/fragment_calculator_keyboard"
             android:layout_width="match_parent"
             android:layout_height="0dp"
