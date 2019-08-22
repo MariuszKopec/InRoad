@@ -25,6 +25,7 @@
             tools:ignore="HardcodedText" />
 
     <ImageView
+            android:id="@+id/view_keyboard_clear"
             style="@style/calendar_button_style"
             android:scaleType="center"
             android:src="@drawable/ic_backspace"

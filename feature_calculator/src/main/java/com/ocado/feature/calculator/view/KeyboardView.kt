@@ -7,10 +7,11 @@ import com.ocado.feature.calculator.R
 import kotlinx.android.synthetic.main.view_keyboard.view.*
 
 internal class KeyboardView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-        LinearLayout(context, attrs, defStyleAttr) {
+    LinearLayout(context, attrs, defStyleAttr) {
 
     lateinit var onButtonClick: (String) -> Unit
     lateinit var onEqualsClick: () -> Unit
+    lateinit var onClearClick: () -> Unit
 
     init {
         inflate(context, R.layout.view_keyboard, this)
@@ -25,6 +26,9 @@ internal class KeyboardView @JvmOverloads constructor(context: Context, attrs: A
         view_keyboard_8.setOnClickListener { onButtonClick("8") }
         view_keyboard_9.setOnClickListener { onButtonClick("9") }
         view_keyboard_dot.setOnClickListener { onButtonClick(".") }
+        view_keyboard_plus.setOnClickListener { onButtonClick("+") }
+        view_keyboard_minus.setOnClickListener { onButtonClick("-") }
         view_keyboard_equals.setOnClickListener { onEqualsClick() }
+        view_keyboard_clear.setOnClickListener { onClearClick() }
     }
 }

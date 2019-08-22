@@ -12,4 +12,7 @@ class CalculatorPresenter @Inject constructor(private val view: CalculatorView) 
 
     fun onEqualsClick() {
     }
+
+    fun onClearClick() {
+    }
 }

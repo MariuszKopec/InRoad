@@ -20,6 +20,7 @@ class CalculatorFragment : BaseFragment(), CalculatorView {
         super.onViewCreated(view, savedInstanceState)
         fragment_calculator_keyboard.onButtonClick = presenter::onKeyboardButtonClick
         fragment_calculator_keyboard.onEqualsClick = presenter::onEqualsClick
+        fragment_calculator_keyboard.onClearClick = presenter::onClearClick
     }
 
     override fun refreshResult(input: String) = fragment_calculator_result.refresh(input)

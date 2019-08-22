@@ -97,4 +97,22 @@ class CalculatorFragmentKeyboardViewTest {
         onView(ViewMatchers.withId(R.id.view_keyboard_equals)).perform(click())
         verify(presenter).onEqualsClick()
     }
+
+    @Test
+    fun verifyOnKeyboardButtonClick_plus() {
+        onView(ViewMatchers.withId(R.id.view_keyboard_plus)).perform(click())
+        verify(presenter).onKeyboardButtonClick("+")
+    }
+
+    @Test
+    fun verifyOnKeyboardButtonClick_minus() {
+        onView(ViewMatchers.withId(R.id.view_keyboard_minus)).perform(click())
+        verify(presenter).onKeyboardButtonClick("-")
+    }
+
+    @Test
+    fun verifyOnKeyboardButtonClick_clear() {
+        onView(ViewMatchers.withId(R.id.view_keyboard_clear)).perform(click())
+        verify(presenter).onClearClick()
+    }
 }
