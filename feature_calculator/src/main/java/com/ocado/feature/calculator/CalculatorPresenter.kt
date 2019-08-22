@@ -7,7 +7,7 @@ import javax.inject.Inject
 class CalculatorPresenter @Inject constructor(private val view: CalculatorView) {
 
     fun onKeyboardButtonClick(input: String) {
-        view.refreshResult(input)
+        view.refreshResult(view.getResult() + input)
     }
 
     fun onEqualsClick() {

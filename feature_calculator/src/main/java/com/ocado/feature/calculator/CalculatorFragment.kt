@@ -23,4 +23,6 @@ class CalculatorFragment : BaseFragment(), CalculatorView {
     }
 
     override fun refreshResult(input: String) = fragment_calculator_result.refresh(input)
+
+    override fun getResult(): String  = fragment_calculator_result.getText()
 }

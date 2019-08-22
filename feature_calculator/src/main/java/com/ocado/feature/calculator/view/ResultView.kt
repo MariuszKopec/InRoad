@@ -15,4 +15,6 @@ internal class ResultView @JvmOverloads constructor(context: Context, attrs: Att
     }
 
     fun refresh(input: String) = view_result_text.setText(input)
+
+    fun getText(): String = view_result_text.text.toString()
 }
