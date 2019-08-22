@@ -2,7 +2,8 @@ apply plugin: 'java-library'
 apply plugin: "kotlin"
 
 dependencies {
-    implementation "javax.inject:javax.inject:$javax_inject"
+    api "javax.inject:javax.inject:$javax_inject"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
 }
 
