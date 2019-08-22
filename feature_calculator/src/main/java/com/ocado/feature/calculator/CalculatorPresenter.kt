@@ -14,5 +14,9 @@ class CalculatorPresenter @Inject constructor(private val view: CalculatorView) 
     }
 
     fun onClearClick() {
+        val result = view.getResult()
+        if (result.isNotEmpty()) {
+            view.refreshResult(result.dropLast(1))
+        }
     }
 }
