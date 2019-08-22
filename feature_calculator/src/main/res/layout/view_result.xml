@@ -8,12 +8,6 @@
         android:padding="@dimen/base_space">
 
     <TextView
-            android:id="@+id/view_result_error"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/calculator_result_error" />
-
-    <TextView
             android:id="@+id/view_result_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
