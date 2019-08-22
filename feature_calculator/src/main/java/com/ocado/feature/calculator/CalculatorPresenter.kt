@@ -1,20 +1,18 @@
 package com.ocado.feature.calculator
 
+import com.ocado.domain.CalculateInteractor
 import com.ocado.feature.base.OpenForTest
 import javax.inject.Inject
 
 @OpenForTest
-class CalculatorPresenter @Inject constructor(private val view: CalculatorView) {
+class CalculatorPresenter @Inject constructor(private val view: CalculatorView,
+                                              private val calculate: CalculateInteractor) {
 
-    fun onKeyboardButtonClick(input: String) {
-        view.refreshResult(view.getResult() + input)
-    }
+    fun onKeyboardButtonClick(input: String) = view.refreshResult(view.getResult() + input)
 
-    fun onEqualsClick() {
-    }
+    fun onEqualsClick() = view.refreshResult(calculate(view.getResult()))
 
-    fun onClearClick() {
-        val result = view.getResult()
+    fun onClearClick() = view.getResult().let { result ->
         if (result.isNotEmpty()) {
             view.refreshResult(result.dropLast(1))
         }
