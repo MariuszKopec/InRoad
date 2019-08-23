@@ -5,6 +5,7 @@
 
 [Run in Browser](https://appetize.io/app/cgnvv7y17t5xfd7x282jv1r0ar?device=nexus5&scale=75&orientation=portrait&osVersion=8.1&deviceColor=black)
 
+[Download APK](https://github.com/MariuszKopec/InRoad/raw/master/app/release/app-release.apk)
 
 <p align="center">
 <img src="https://github.com/MariuszKopec/InRoad/blob/master/screen.png" alt="Drawing" style="width: 10px;"/>
