@@ -25,6 +25,7 @@ class CalculatorTest {
         assertEquals(0.0, calculate("-2+2"))
         assertEquals(0.0, calculate("-2+2"))
         assertEquals(0.0, calculate("-2.0+2.0"))
+        assertEquals(0.2, calculate("-2.2+2.4"))
     }
 
     @Test(expected = CalculateInteractor.WrongExpressionException::class)
