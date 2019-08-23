@@ -19,11 +19,11 @@ class CalculateInteractor @Inject constructor() {
     }
 
     private fun getValuesStack(input: String) = LinkedList<Double>().apply {
-        addAll(input.split("+", "-").filter { it.isNotEmpty() }.map { it.toDouble() })
+        addAll(input.trimStart { it == '-' }.split("+", "-").filter { it.isNotEmpty() }.map { it.toDouble() })
         if (input.firstOrNull() == '-' && isNotEmpty()) set(0, get(0) * -1)
     }
 
-    private fun getOperators(input: String) = input.filter { it == '+' || it == '-' }
+    private fun getOperators(input: String) = input.trimStart { it == '-' }.filter { it == '+' || it == '-' }
 
     class WrongExpressionException : RuntimeException()
 }
