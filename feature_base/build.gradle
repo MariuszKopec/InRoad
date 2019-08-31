@@ -21,6 +21,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    configurations {
+        baseTest.extendsFrom testImplementation
+        baseAndroidTest.extendsFrom androidTestImplementation
+    }
 }
 
 dependencies {
@@ -34,4 +39,14 @@ dependencies {
     api "com.google.dagger:dagger:$project.daggerVersion"
     api "com.google.dagger:dagger-android:$project.daggerVersion"
     api "com.google.dagger:dagger-android-support:$project.daggerVersion"
+
+    //Test
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-android:2.26.0'
+    debugApi ('androidx.fragment:fragment-testing:1.2.0-alpha02') {
+        exclude group: 'androidx.test', module: 'core'
+    }
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'org.mockito:mockito-android:2.26.0'
 }
