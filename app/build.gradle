@@ -35,15 +35,9 @@ dependencies {
     implementation project(':feature_base')
     implementation project(':feature_calculator')
     implementation project(':domain')
+    androidTestImplementation project(path: ':feature_base', configuration: 'baseAndroidTest')
 
     //Dagger
     kapt "com.google.dagger:dagger-android-processor:$project.daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$project.daggerVersion"
-
-    //Test
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    testImplementation 'org.mockito:mockito-core:2.26.0'
-    androidTestImplementation 'org.mockito:mockito-android:2.26.0'
 }
