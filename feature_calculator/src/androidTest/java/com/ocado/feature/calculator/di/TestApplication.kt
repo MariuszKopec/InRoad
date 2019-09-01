@@ -1,4 +1,4 @@
-package com.ocado.feature.base.di
+package com.ocado.feature.calculator.di
 
 import android.app.Application
 import androidx.fragment.app.Fragment

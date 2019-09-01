@@ -1,6 +1,5 @@
 package com.ocado.feature.calculator.di
 
-import com.ocado.feature.base.di.TestApplication
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
