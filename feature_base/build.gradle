@@ -44,6 +44,10 @@ dependencies {
     //Test
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-android:2.26.0'
+    testImplementation 'org.robolectric:robolectric:4.3'
+    testImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation "androidx.test:rules:1.2.0"
+    testImplementation 'androidx.test.ext:junit:1.1.1'
     debugApi ('androidx.fragment:fragment-testing:1.2.0-alpha02') {
         exclude group: 'androidx.test', module: 'core'
     }

@@ -3,10 +3,8 @@ package com.ocado.feature.calculator
 import com.ocado.domain.CalculateInteractor
 import com.ocado.domain.CalculateInteractor.WrongExpressionException
 import com.ocado.feature.base.Log
-import com.ocado.feature.base.OpenForTest
 import javax.inject.Inject
 
-@OpenForTest
 class CalculatorPresenter @Inject constructor(private val view: CalculatorView,
                                               private val calculate: CalculateInteractor,
                                               private val log: Log = Log(),
