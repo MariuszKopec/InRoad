@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
 apply plugin: 'jacoco-android'
 
 android {
@@ -45,11 +44,6 @@ android {
 
 dependencies {
     implementation project(':feature_base')
-    testImplementation project(path: ':feature_base', configuration: 'baseTest')
-    androidTestImplementation project(path: ':feature_base', configuration: 'baseAndroidTest')
     implementation project(':domain')
-
-    //Test
-    kaptTest "com.google.dagger:dagger-android-processor:$project.daggerVersion"
-    kaptTest "com.google.dagger:dagger-compiler:$project.daggerVersion"
+    testImplementation project(path: ':feature_base', configuration: 'baseTest')
 }

@@ -1,12 +1,8 @@
 package com.ocado.feature.calculator
 
-import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.matcher.ViewMatchers
-import com.ocado.feature.calculator.di.TestApplication
-import com.ocado.feature.calculator.di.TestCalculatorFragmentModule
-import com.ocado.feature.calculator.di.TestInjector
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -14,10 +10,8 @@ import org.mockito.Mock
 import org.mockito.Mockito.verify
 import org.mockito.MockitoAnnotations
 import org.robolectric.RobolectricTestRunner
-import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
-@Config(application = TestApplication::class)
 class CalculatorFragmentKeyboardViewTest {
     @Mock
     lateinit var presenter: CalculatorPresenter
@@ -25,8 +19,7 @@ class CalculatorFragmentKeyboardViewTest {
     @Before
     fun setup() {
         MockitoAnnotations.initMocks(this)
-        TestInjector(TestCalculatorFragmentModule(presenter)).inject()
-        launchFragmentInContainer<CalculatorFragment>(themeResId = R.style.AppTheme)
+        launchCalculatorFragment(presenter)
     }
 
     @Test
