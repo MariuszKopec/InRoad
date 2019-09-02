@@ -1,10 +1,10 @@
 package com.ocado.feature.calculator
 
-import androidx.fragment.app.testing.FragmentScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withText
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -16,23 +16,29 @@ import org.robolectric.RobolectricTestRunner
 class CalculatorFragmentResultViewTest {
     @Mock
     lateinit var presenter: CalculatorPresenter
-    private lateinit var fragmentScenario: FragmentScenario<CalculatorFragment>
 
     @Before
     fun setup() {
         MockitoAnnotations.initMocks(this)
-        fragmentScenario = launchCalculatorFragment(presenter)
     }
 
     @Test
     fun onRefreshEmptyResult_showEmptyText() {
-        fragmentScenario.onFragment { it.refreshResult("test") }
+        launchCalculatorFragment(presenter).onFragment { it.refreshResult("test") }
         onView(ViewMatchers.withId(R.id.view_result_text)).check(matches(withText("test")))
     }
 
     @Test
     fun onRefreshResult_showText() {
-        fragmentScenario.onFragment { it.refreshResult("") }
+        launchCalculatorFragment(presenter).onFragment { it.refreshResult("") }
         onView(ViewMatchers.withId(R.id.view_result_text)).check(matches(withText("")))
+    }
+
+    @Test
+    fun testGetResult_returnsRefreshedResult() {
+        launchCalculatorFragment(presenter).onFragment {
+            it.refreshResult("test")
+            assertEquals("test", it.getResult())
+        }
     }
 }
